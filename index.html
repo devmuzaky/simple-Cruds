@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="w-75 mx-auto py-4">
+      <h3 class="py-3 fw-bolder">Product Mangement System</h3>
+
+      <label for="productNameInput">productName :</label>
+      <input type="text" class="form-control mb-2" id="productNameInput" />
+
+      <label for="productPriceInput">productPrice :</label>
+      <input type="number" class="form-control mb-2" id="productPriceInput" />
+
+      <label for="productCategoryInput">productCategory :</label>
+      <input type="text" class="form-control mb-2" id="productCategoryInput" />
+
+      <label for="productDescriptionInput">productDescription :</label>
+      <textarea
+        type="text"
+        class="form-control mb-2"
+        id="productDescriptionInput"
+      ></textarea>
+
+      <button class="btn btn-info" id="addProductButton">
+        Add Product
+      </button>
+      <button class="btn d-none btn-primary" id="updateProductButton">
+        Update
+      </button>
+    </div>
+
+<div class="table-body">
+    <div class="w-75 mx-auto p-4 searchDiv">
+        <label for="search">search :</label>
+        <input
+          type="text"
+          placeholder="search by name"
+          class="form-control"
+          id="search"
+          oninput="searchProducts(this.value)"
+        />
+      </div>
+      <div class="myTable">
+        <table class="table w-75 mx-auto table-hover ">
+            <thead class="table-light">
+              <th>index</th>
+              <th>ProductName</th>
+              <th>ProductPrice</th>
+              <th>ProductCategory</th>
+              <th>ProductDesc</th>
+              <th >update</th>
+              <th id="delete__Btn" >delete</th>
+            </thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+      </div>
+
+</div>
+
+    <script src="js/main.js" async></script>
+  </body>
+</html>
